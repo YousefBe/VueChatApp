@@ -24,6 +24,7 @@ export default {
         async HandleSubmit(){
             const {error , signUp}  = useSignUp();
             await signUp(this.email , this.password , this.userName);
+            this.$router.push({name:"chatRoom"})
             if (error) {
                this.error = error
             }
